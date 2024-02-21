@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import studentController from "./controllers/studentController.js";
+import departmentController from "./controllers/departmentController.js.js";
 
 const app = express();
 const port = 8080;
@@ -15,6 +16,7 @@ app.use(express.json());
 // });
 
 app.use("/api/students", studentController);
+app.use("/api/department", departmentController);
 
 app.listen(port, () => {
   console.log(`REST API application is running on port ${port}.`);

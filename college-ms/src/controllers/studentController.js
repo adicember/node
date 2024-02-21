@@ -18,10 +18,10 @@ const nameList = [
 ];
 
 studentController.get("/nameList", (req, res) => {
-  res.status(200).json({
-    studentName: nameList,
+    res.status(200).json({
+      students: nameList,
+    });
   });
-});
 
 studentController.post("/createList", (req, res) => {
   const { name, age } = req.body;
@@ -33,9 +33,7 @@ studentController.post("/createList", (req, res) => {
   });
 });
 
-studentController.get("/batchList"), (req, res) => {
-    
-}
+
 
 
 

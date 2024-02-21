@@ -2,41 +2,36 @@ import { Router } from "express";
 
 const departmentController = Router();
 
-const nameList = [
+const deptList = [
   {
-    name: "Aditika",
-    age: 22,
+    name: "CSIT",
+    student: 22,
   },
   {
-    name: "Smriti",
-    age: 21,
+    name: "BIM",
+    student: 21,
   },
   {
-    name: "Jenny",
-    age: 21,
+    name: "BCA",
+    student: 21,
   },
 ];
 
-departmentController.get("/nameList", (req, res) => {
+departmentController.get("/deptList", (req, res) => {
   res.status(200).json({
-    studentName: nameList,
+    deptName: deptList,
   });
 });
 
-departmentController.post("/createList", (req, res) => {
-  const { name, age } = req.body;
-  console.log(name, age);
+departmentController.post("/List", (req, res) => {
+  const { name, student } = req.body;
+  console.log(name, student);
   // console.log("name: ", name, "age: ", age);
 
   res.status(200).json({
     message: "Student created!!!",
   });
 });
-
-departmentController.get("/batchList"), (req, res) => {
-    
-}
-
 
 
 

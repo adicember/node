@@ -17,6 +17,10 @@ const studentList = [
   },
 ];
 
+// sudo chown aditikasingh ~/data/db
+// sudo chown aditikasingh ~/data/log/mongodb
+
+
 studentController.get("/list", (req, res) => {
   res.status(200).json({
     students: studentList,
